@@ -14,4 +14,20 @@ CREATE TABLE IF NOR EXISTS user (
 );
 ''')
 
+def menu():
+    print('*****************************')
+    print('* i : inserir nova senha    *')
+    print('* r : recuperar uma senha   *')
+    print('* s : sair                  *')
+    print('*****************************')
+
+while True: 
+    menu()
+    op = input('o que deseja fazer? ')
+    if op not in ['l','i','r','s']:
+        print('Opção Inválida!')
+        continue
+    if op == 's':
+        break
+
 conn.close()
