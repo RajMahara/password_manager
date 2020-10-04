@@ -21,6 +21,13 @@ def menu():
     print('* s : sair                  *')
     print('*****************************')
 
+def show_passwords(cursor):
+    cursor.execute('''
+        SELECT service FROM users;
+    ''')
+    for service in cursor.fetchall():
+        print(service)
+
 while True: 
     menu()
     op = input('o que deseja fazer? ')
